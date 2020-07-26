@@ -1,0 +1,15 @@
+version: '2'
+services:
+  turq:
+    image: python:3.6.6-alpine
+    command:
+      - '/bin/sh'
+      - '-c'
+      - 'pip3 install turq  && pip3 install requests && echo "============" && cat /data/mocks.py && echo "============" && turq -v -p=13085 -P="" -r=/data/mocks.py'
+    environment:
+      GATEWAY_URL: http://api-stg/location
+    ports:
+      - "13085:13085"
+      - "13086:13086"
+    volumes:
+      - "./:/data"   
