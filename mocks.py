@@ -39,12 +39,12 @@ def handle_response(resp, parser=None):
         status(resp.status_code)
         json(resp.json())
 
+def log(message):
+    logging.getLogger('turq').debug("[DEBUG] %s" % message)
+
 GATEWAY_URL = ''
 if 'GATEWAY_URL' in os.environ:
     GATEWAY_URL = os.environ['GATEWAY_URL']
-
-def log(message):
-    logging.getLogger('turq').debug("[DEBUG] %s" % message)
 
 
 log('GATEWAY_URL=%s' % GATEWAY_URL)
