@@ -5,7 +5,7 @@
 
 
 
-1. This command will run docker compose and start a Turq Http Server with a initital mock `mock.py`
+1. This command will run docker compose and start a Turq Http Server with a initital mock `mock.py`.
 ```
 $ ./start.sh
 ```
@@ -14,3 +14,5 @@ $ ./start.sh
 ```
 $ ./stop.sh
 ```
+
+After start the script, will be available a http://localhost:13086 where we can edit the mocks, and in http://localhost:13085 it's our Http Server up 
